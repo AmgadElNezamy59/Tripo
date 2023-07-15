@@ -7,7 +7,7 @@
 
 import Foundation
 class TripModel {
-    var id : String
+    let id : String
     var title : String
     
     init(title: String) {

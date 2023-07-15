@@ -9,27 +9,27 @@
 /* Begin PBXBuildFile section */
 		18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */; };
 		18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */; };
-		18A73EC22A61A5CE0050D904 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EC12A61A5CE0050D904 /* ViewController.swift */; };
-		18A73EC52A61A5CE0050D904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC32A61A5CE0050D904 /* Main.storyboard */; };
 		18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC62A61A5CF0050D904 /* Assets.xcassets */; };
 		18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC82A61A5CF0050D904 /* LaunchScreen.storyboard */; };
 		18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A192A62DDFF003B979B /* TripModel.swift */; };
 		18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */; };
 		18BD5A1E2A62E10E003B979B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A1D2A62E10E003B979B /* Data.swift */; };
+		18BD5A242A62E8B7003B979B /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A232A62E8B7003B979B /* TripsViewController.swift */; };
+		18BD5A262A62E8BE003B979B /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BD5A252A62E8BE003B979B /* TripsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18A73EBA2A61A5CE0050D904 /* Tripo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		18A73EC12A61A5CE0050D904 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18A73EC42A61A5CE0050D904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18A73EC62A61A5CF0050D904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A73EC92A61A5CF0050D904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A73ECB2A61A5CF0050D904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BD5A192A62DDFF003B979B /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 		18BD5A1D2A62E10E003B979B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		18BD5A232A62E8B7003B979B /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		18BD5A252A62E8BE003B979B /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +62,10 @@
 		18A73EBC2A61A5CE0050D904 /* Tripo */ = {
 			isa = PBXGroup;
 			children = (
+				18BD5A1F2A62E6D3003B979B /* Views */,
 				18BD5A172A62DDCD003B979B /* Model */,
 				18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */,
 				18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */,
-				18A73EC12A61A5CE0050D904 /* ViewController.swift */,
-				18A73EC32A61A5CE0050D904 /* Main.storyboard */,
 				18A73EC62A61A5CF0050D904 /* Assets.xcassets */,
 				18A73EC82A61A5CF0050D904 /* LaunchScreen.storyboard */,
 				18A73ECB2A61A5CF0050D904 /* Info.plist */,
@@ -90,6 +89,23 @@
 				18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */,
 			);
 			path = Trip;
+			sourceTree = "<group>";
+		};
+		18BD5A1F2A62E6D3003B979B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18BD5A202A62E6E3003B979B /* TripsViewController */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18BD5A202A62E6E3003B979B /* TripsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18BD5A232A62E8B7003B979B /* TripsViewController.swift */,
+				18BD5A252A62E8BE003B979B /* TripsViewController.storyboard */,
+			);
+			path = TripsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,8 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */,
+				18BD5A262A62E8BE003B979B /* TripsViewController.storyboard in Resources */,
 				18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */,
-				18A73EC52A61A5CE0050D904 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,10 +179,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A73EC22A61A5CE0050D904 /* ViewController.swift in Sources */,
 				18BD5A1E2A62E10E003B979B /* Data.swift in Sources */,
 				18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */,
 				18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */,
+				18BD5A242A62E8B7003B979B /* TripsViewController.swift in Sources */,
 				18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,
 			);
@@ -175,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		18A73EC32A61A5CE0050D904 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18A73EC42A61A5CE0050D904 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		18A73EC82A61A5CF0050D904 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -320,7 +328,7 @@
 				INFOPLIST_FILE = Tripo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TripsViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -348,7 +356,7 @@
 				INFOPLIST_FILE = Tripo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TripsViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
