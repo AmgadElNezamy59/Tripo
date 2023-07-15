@@ -13,6 +13,8 @@
 		18A73EC52A61A5CE0050D904 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC32A61A5CE0050D904 /* Main.storyboard */; };
 		18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC62A61A5CF0050D904 /* Assets.xcassets */; };
 		18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC82A61A5CF0050D904 /* LaunchScreen.storyboard */; };
+		18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A192A62DDFF003B979B /* TripModel.swift */; };
+		18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		18A73EC62A61A5CF0050D904 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A73EC92A61A5CF0050D904 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A73ECB2A61A5CF0050D904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BD5A192A62DDFF003B979B /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		18A73EBC2A61A5CE0050D904 /* Tripo */ = {
 			isa = PBXGroup;
 			children = (
+				18BD5A172A62DDCD003B979B /* Model */,
 				18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */,
 				18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */,
 				18A73EC12A61A5CE0050D904 /* ViewController.swift */,
@@ -65,6 +70,23 @@
 				18A73ECB2A61A5CF0050D904 /* Info.plist */,
 			);
 			path = Tripo;
+			sourceTree = "<group>";
+		};
+		18BD5A172A62DDCD003B979B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18BD5A182A62DDEE003B979B /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18BD5A182A62DDEE003B979B /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				18BD5A192A62DDFF003B979B /* TripModel.swift */,
+				18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */,
+			);
+			path = Trip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +161,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A73EC22A61A5CE0050D904 /* ViewController.swift in Sources */,
+				18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */,
 				18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */,
+				18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
