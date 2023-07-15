@@ -17,6 +17,7 @@ class TripFunctions {
                 Data.tripModels.append(TripModel(title: "Trip to Alexandria"))
                 Data.tripModels.append(TripModel(title: "Mexico"))
                 Data.tripModels.append(TripModel(title: "Russion Trip "))
+                
             }
         }
         DispatchQueue.main.async {
