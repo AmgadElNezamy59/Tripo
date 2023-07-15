@@ -15,6 +15,7 @@
 		18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC82A61A5CF0050D904 /* LaunchScreen.storyboard */; };
 		18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A192A62DDFF003B979B /* TripModel.swift */; };
 		18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */; };
+		18BD5A1E2A62E10E003B979B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A1D2A62E10E003B979B /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		18A73ECB2A61A5CF0050D904 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18BD5A192A62DDFF003B979B /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		18BD5A1B2A62DE0D003B979B /* TripFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunctions.swift; sourceTree = "<group>"; };
+		18BD5A1D2A62E10E003B979B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		18BD5A172A62DDCD003B979B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18BD5A1D2A62E10E003B979B /* Data.swift */,
 				18BD5A182A62DDEE003B979B /* Trip */,
 			);
 			path = Model;
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A73EC22A61A5CE0050D904 /* ViewController.swift in Sources */,
+				18BD5A1E2A62E10E003B979B /* Data.swift in Sources */,
 				18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */,
 				18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */,
 				18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */,
