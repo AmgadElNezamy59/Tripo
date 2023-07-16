@@ -14,6 +14,9 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var tripTxtField: UITextField!
     @IBOutlet weak var titleLbl: UILabel!
+    
+    var savingDone : (()->())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         popUpView.addRoundedCorner()
@@ -28,11 +31,17 @@ class AddTripViewController: UIViewController {
 
     @IBAction func cancelBtnPressed(_ sender: UIButton) {
         dismiss(animated: true)
+       
     }
     
     @IBAction func saveBtnPressed(_ sender: Any) {
         dismiss(animated: true)
+        guard let tripTxtField = tripTxtField.text else {return}
+        TripFunctions.createTrip(tripmodel: TripModel(title: tripTxtField))
+        if let savingDone = savingDone{
+            savingDone()
+        }
 
     }
-    
+        
 }

@@ -59,7 +59,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" weight="semibold"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="KIy-UG-heE" kind="presentation" id="NpU-Ew-4Wi"/>
+                                    <segue destination="KIy-UG-heE" kind="presentation" identifier="toAddTripSegue" id="NpU-Ew-4Wi"/>
                                 </connections>
                             </button>
                         </subviews>

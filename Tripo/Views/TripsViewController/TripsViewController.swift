@@ -23,11 +23,19 @@ class TripsViewController : UIViewController {
     
         view.backgroundColor = Theme.backgroundColor
         
-       
-        
-       
-
+    
     }
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "toAddTripSegue"{
+            let popUp = segue.destination as! AddTripViewController
+            
+            popUp.savingDone = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+    
 
 }
 
