@@ -7,38 +7,56 @@
 
 import UIKit
 
-class TripsViewController: UIViewController {
+class TripsViewController : UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var addBtn: FlaotingActionButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
+        
         TripFunctions.readTrips {
             self.tableView.reloadData()
         }
+    
+        view.backgroundColor = Theme.background
+        
+       
+        
+       
 
     }
 
 }
 
-extension TripsViewController:UITableViewDataSource{
+
+//MARK: TripsViewController extension with UITableViewDataSource
+
+extension TripsViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Data.tripModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" ,for: indexPath) as! TripsTableViewCell
         
-        if cell == nil{
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
-        
-        cell!.textLabel?.text = Data.tripModels[indexPath.row].title
-        return cell!
+        cell.selectionStyle = .none
+        cell.setUp(tripModel: Data.tripModels[indexPath.row])
+      
+        return cell
     }
     
-   
+}
+
+
+//MARK: TripsViewController extension with UITableViewDelegate
+
+extension TripsViewController : UITableViewDelegate{
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.frame.size.height * 0.22
+    }
     
 }

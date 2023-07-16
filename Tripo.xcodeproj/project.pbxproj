@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */; };
+		18818B902A63FE790017D7E2 /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */; };
+		18818B932A63FF420017D7E2 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B922A63FF420017D7E2 /* AddTripViewController.swift */; };
 		18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */; };
 		18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */; };
 		18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC62A61A5CF0050D904 /* Assets.xcassets */; };
@@ -16,9 +19,17 @@
 		18BD5A1E2A62E10E003B979B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A1D2A62E10E003B979B /* Data.swift */; };
 		18BD5A242A62E8B7003B979B /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A232A62E8B7003B979B /* TripsViewController.swift */; };
 		18BD5A262A62E8BE003B979B /* TripsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BD5A252A62E8BE003B979B /* TripsViewController.storyboard */; };
+		18BD5A282A62FEA3003B979B /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A272A62FEA3003B979B /* TripsTableViewCell.swift */; };
+		18BD5A2B2A630B3E003B979B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A2A2A630B3E003B979B /* UIViewExtension.swift */; };
+		18BD5A2E2A631E72003B979B /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD5A2D2A631E72003B979B /* Theme.swift */; };
+		18BD5A312A6323A4003B979B /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18BD5A2F2A631F79003B979B /* FugazOne-Regular.ttf */; };
+		18BD5A332A632509003B979B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BD5A322A632509003B979B /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaotingActionButton.swift; sourceTree = "<group>"; };
+		18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
+		18818B922A63FF420017D7E2 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 		18A73EBA2A61A5CE0050D904 /* Tripo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +41,11 @@
 		18BD5A1D2A62E10E003B979B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		18BD5A232A62E8B7003B979B /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		18BD5A252A62E8BE003B979B /* TripsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TripsViewController.storyboard; sourceTree = "<group>"; };
+		18BD5A272A62FEA3003B979B /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		18BD5A2A2A630B3E003B979B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		18BD5A2D2A631E72003B979B /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		18BD5A2F2A631F79003B979B /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
+		18BD5A322A632509003B979B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18818B912A63FEFA0017D7E2 /* AddTripViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */,
+				18818B922A63FF420017D7E2 /* AddTripViewController.swift */,
+			);
+			path = AddTripViewController;
+			sourceTree = "<group>";
+		};
 		18A73EB12A61A5CE0050D904 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +87,8 @@
 		18A73EBC2A61A5CE0050D904 /* Tripo */ = {
 			isa = PBXGroup;
 			children = (
+				18BD5A2C2A631E5E003B979B /* Resources */,
+				18BD5A292A630AFD003B979B /* Extensions */,
 				18BD5A1F2A62E6D3003B979B /* Views */,
 				18BD5A172A62DDCD003B979B /* Model */,
 				18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */,
@@ -94,6 +121,7 @@
 		18BD5A1F2A62E6D3003B979B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18818B912A63FEFA0017D7E2 /* AddTripViewController */,
 				18BD5A202A62E6E3003B979B /* TripsViewController */,
 			);
 			path = Views;
@@ -104,8 +132,28 @@
 			children = (
 				18BD5A232A62E8B7003B979B /* TripsViewController.swift */,
 				18BD5A252A62E8BE003B979B /* TripsViewController.storyboard */,
+				18BD5A272A62FEA3003B979B /* TripsTableViewCell.swift */,
 			);
 			path = TripsViewController;
+			sourceTree = "<group>";
+		};
+		18BD5A292A630AFD003B979B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18BD5A2A2A630B3E003B979B /* UIViewExtension.swift */,
+				18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18BD5A2C2A631E5E003B979B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18BD5A2F2A631F79003B979B /* FugazOne-Regular.ttf */,
+				18BD5A2D2A631E72003B979B /* Theme.swift */,
+				18BD5A322A632509003B979B /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +214,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18818B902A63FE790017D7E2 /* AddTripViewController.storyboard in Resources */,
+				18BD5A332A632509003B979B /* Colors.xcassets in Resources */,
 				18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */,
 				18BD5A262A62E8BE003B979B /* TripsViewController.storyboard in Resources */,
+				18BD5A312A6323A4003B979B /* FugazOne-Regular.ttf in Resources */,
 				18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,11 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BD5A2E2A631E72003B979B /* Theme.swift in Sources */,
 				18BD5A1E2A62E10E003B979B /* Data.swift in Sources */,
 				18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */,
 				18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */,
 				18BD5A242A62E8B7003B979B /* TripsViewController.swift in Sources */,
 				18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */,
+				18BD5A282A62FEA3003B979B /* TripsTableViewCell.swift in Sources */,
+				18818B932A63FF420017D7E2 /* AddTripViewController.swift in Sources */,
+				18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */,
+				18BD5A2B2A630B3E003B979B /* UIViewExtension.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
