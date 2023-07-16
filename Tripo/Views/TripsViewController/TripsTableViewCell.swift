@@ -10,6 +10,7 @@ import UIKit
 class TripsTableViewCell: UITableViewCell {
     @IBOutlet weak var cardView: UIView!
     
+    @IBOutlet weak var tripImageView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,7 +18,7 @@ class TripsTableViewCell: UITableViewCell {
         cardView.addRoundedCorner()
         cardView.backgroundColor = Theme.accent
         titleLbl.font = UIFont(name: Theme.mainFontame, size: 39)
-        
+        tripImageView.layer.cornerRadius = cardView.layer.cornerRadius
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,6 +28,7 @@ class TripsTableViewCell: UITableViewCell {
     
     func setUp(tripModel :TripModel){
         titleLbl.text = tripModel.title
+        tripImageView.image = tripModel.image
     }
 
 }
