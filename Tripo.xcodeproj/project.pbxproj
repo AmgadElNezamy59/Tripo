@@ -10,6 +10,7 @@
 		18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */; };
 		18818B902A63FE790017D7E2 /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */; };
 		18818B932A63FF420017D7E2 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B922A63FF420017D7E2 /* AddTripViewController.swift */; };
+		18818B982A64091B0017D7E2 /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B972A64091B0017D7E2 /* AppUIButton.swift */; };
 		18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */; };
 		18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */; };
 		18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A73EC62A61A5CF0050D904 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaotingActionButton.swift; sourceTree = "<group>"; };
 		18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		18818B922A63FF420017D7E2 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
+		18818B972A64091B0017D7E2 /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
 		18A73EBA2A61A5CE0050D904 /* Tripo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A73EBF2A61A5CE0050D904 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				18BD5A2C2A631E5E003B979B /* Resources */,
-				18BD5A292A630AFD003B979B /* Extensions */,
 				18BD5A1F2A62E6D3003B979B /* Views */,
 				18BD5A172A62DDCD003B979B /* Model */,
 				18A73EBD2A61A5CE0050D904 /* AppDelegate.swift */,
@@ -142,6 +143,7 @@
 			children = (
 				18BD5A2A2A630B3E003B979B /* UIViewExtension.swift */,
 				18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */,
+				18818B972A64091B0017D7E2 /* AppUIButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,6 +151,7 @@
 		18BD5A2C2A631E5E003B979B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18BD5A292A630AFD003B979B /* Extensions */,
 				18BD5A2F2A631F79003B979B /* FugazOne-Regular.ttf */,
 				18BD5A2D2A631E72003B979B /* Theme.swift */,
 				18BD5A322A632509003B979B /* Colors.xcassets */,
@@ -233,6 +236,7 @@
 				18BD5A2E2A631E72003B979B /* Theme.swift in Sources */,
 				18BD5A1E2A62E10E003B979B /* Data.swift in Sources */,
 				18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */,
+				18818B982A64091B0017D7E2 /* AppUIButton.swift in Sources */,
 				18A73EBE2A61A5CE0050D904 /* AppDelegate.swift in Sources */,
 				18BD5A242A62E8B7003B979B /* TripsViewController.swift in Sources */,
 				18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */,

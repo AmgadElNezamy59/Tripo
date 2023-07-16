@@ -12,7 +12,7 @@ class FlaotingActionButton: UIButton {
     
     override func draw(_ rect: CGRect) {
         layer.backgroundColor = Theme.tint?.cgColor
-        tintColor = Theme.background
+        tintColor = Theme.backgroundColor
         layer.cornerRadius = frame.height / 2
         layer.shadowOpacity = 0.25
         layer.shadowRadius = 5
