@@ -13,7 +13,7 @@
         <!--Add Trip View Controller-->
         <scene sceneID="Zkx-Y3-uLC">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="ps0-bL-psJ" customClass="AddTripViewController" customModule="Tripo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tripView" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="ps0-bL-psJ" customClass="AddTripViewController" customModule="Tripo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vSe-2H-Sg7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <namedColor name="Tint">
-            <color red="0.9179999828338623" green="0.34099999070167542" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.91764705882352937" green="0.33725490196078434" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

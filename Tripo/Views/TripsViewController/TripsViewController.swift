@@ -10,12 +10,16 @@ import UIKit
 class TripsViewController : UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var addBtn: FlaotingActionButton!
+    
+    var tripIndexToEdit: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         tableView.delegate = self
+        
         
         TripFunctions.readTrips {
             self.tableView.reloadData()
@@ -25,18 +29,16 @@ class TripsViewController : UIViewController {
         
     
     }
+    
     override func prepare (for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "toAddTripSegue"{
             let popUp = segue.destination as! AddTripViewController
-            
+            popUp.tripIndexToEdit = self.tripIndexToEdit
             popUp.savingDone = { [weak self] in
                 self?.tableView.reloadData()
             }
         }
     }
-    
-    
-
 }
 
 
@@ -47,13 +49,14 @@ extension TripsViewController : UITableViewDataSource{
         Data.tripModels.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" ,for: indexPath) as! TripsTableViewCell
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" ,for: indexPath) as! TripsTableViewCell
         cell.selectionStyle = .none
         cell.setUp(tripModel: Data.tripModels[indexPath.row])
-      
         return cell
+        
     }
     
 }
@@ -68,31 +71,49 @@ extension TripsViewController : UITableViewDelegate{
     }
     
     
+    
+    // trailingSwipeActionsConfigurationForRowAtindexPath
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .destructive, title: "delete") { (action, view, actionPerformed : @escaping (Bool)->()) in
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, actionPerformed : @escaping (Bool)->()) in
             
             let alert = UIAlertController(title: "Delete Trip", message: "Are you sure you want to delete this trip?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { alertAction in
                 actionPerformed(false)
-
             }))
             
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { alertAction in
                 TripFunctions.deleteTrip(index: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .fade)
                 actionPerformed(true)
-
             }))
             
             self.present(alert, animated: true)
-            
-            
-            
-            
-            
         }
+        delete.image = UIImage(systemName: "trash.fill")
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    
+    
+    // leadingSwipeActionsConfigurationForRowAt
+    
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (action, view, actionPerformed : @escaping (Bool) -> ()) in
+            
+            self.tripIndexToEdit = indexPath.row
+            self.performSegue(withIdentifier: "toAddTripSegue", sender: nil)
+           
+            actionPerformed(true)
+            
+
+        }
+        edit.image = UIImage(systemName: "pencil")
+        edit.backgroundColor = UIColor(named: "Edit")
+        
+        return UISwipeActionsConfiguration(actions: [edit])
     }
     
 }

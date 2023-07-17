@@ -8,10 +8,11 @@
 import UIKit
 
 class TripsTableViewCell: UITableViewCell {
-    @IBOutlet weak var cardView: UIView!
     
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var tripImageView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         cardView.addShadow()

@@ -15,9 +15,10 @@ class AddTripViewController: UIViewController {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var tripTxtField: UITextField!
     @IBOutlet weak var titleLbl: UILabel!
-    
     @IBOutlet weak var tripImageView: UIImageView!
+    
     var savingDone : (()->())?
+    var tripIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,12 @@ class AddTripViewController: UIViewController {
         titleLbl.shadowOffset = CGSize.zero
         titleLbl.layer.shadowRadius = 5
         
+        if let index = tripIndexToEdit {
+            let trip = Data.tripModels[index]
+            tripTxtField.text = trip.title
+            tripImageView.image = trip.image
+        }
+        
         
         
         
@@ -43,6 +50,8 @@ class AddTripViewController: UIViewController {
         
     }
     
+    
+    
     @IBAction func saveBtnPressed(_ sender: Any) {
         guard tripTxtField.text != "", let newTripName = tripTxtField.text else {
             tripTxtField.layer.borderColor = Theme.tint?.cgColor
@@ -52,7 +61,12 @@ class AddTripViewController: UIViewController {
             return
         }
         
-        TripFunctions.createTrip(tripmodel: TripModel(title: newTripName, image: tripImageView.image))
+        if let index = tripIndexToEdit {
+            TripFunctions.updateTrip(at: index, title: newTripName, image: tripImageView.image!)
+        }else{
+            TripFunctions.createTrip(tripmodel: TripModel(title: newTripName, image: tripImageView.image))
+        }
+        
         if let savingDone = savingDone{
             savingDone()
         }
