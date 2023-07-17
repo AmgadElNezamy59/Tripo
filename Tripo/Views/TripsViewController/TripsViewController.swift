@@ -15,6 +15,7 @@ class TripsViewController : UIViewController {
     @IBOutlet var helpView: UIVisualEffectView!
     var tripIndexToEdit: Int?
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,11 +24,18 @@ class TripsViewController : UIViewController {
         
         
         TripFunctions.readTrips {
+            
             self.tableView.reloadData()
+            if Data.tripModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: "seenTripHelp") == false{
+                    self.helpView.frame = self.view.frame
+                    self.view.addSubview(self.helpView)
+                }
+            }
+            
+            
         }
         
-        helpView.frame = view.frame
-        view.addSubview(helpView)
     
         view.backgroundColor = Theme.backgroundColor
         
@@ -40,6 +48,7 @@ class TripsViewController : UIViewController {
             self.helpView.alpha = 0
         } completion: { Bool in
             self.helpView.removeFromSuperview()
+            UserDefaults.standard.set (true, forKey: "seenTripHelp")
 
         }
 
