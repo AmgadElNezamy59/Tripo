@@ -37,6 +37,7 @@ class AddTripViewController: UIViewController {
             let trip = Data.tripModels[index]
             tripTxtField.text = trip.title
             tripImageView.image = trip.image
+            titleLbl.text = "Edit Trip"
         }
         
         
@@ -62,7 +63,7 @@ class AddTripViewController: UIViewController {
         }
         
         if let index = tripIndexToEdit {
-            TripFunctions.updateTrip(at: index, title: newTripName, image: tripImageView.image!)
+            TripFunctions.updateTrip(at: index, title: newTripName, image: tripImageView.image)
         }else{
             TripFunctions.createTrip(tripmodel: TripModel(title: newTripName, image: tripImageView.image))
         }

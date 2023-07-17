@@ -12,6 +12,7 @@ class TripsViewController : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addBtn: FlaotingActionButton!
     
+    @IBOutlet var helpView: UIVisualEffectView!
     var tripIndexToEdit: Int?
 
     override func viewDidLoad() {
@@ -24,11 +25,27 @@ class TripsViewController : UIViewController {
         TripFunctions.readTrips {
             self.tableView.reloadData()
         }
+        
+        helpView.frame = view.frame
+        view.addSubview(helpView)
     
         view.backgroundColor = Theme.backgroundColor
         
     
     }
+    
+    
+    @IBAction func cancelHelpBtn(_ sender: Any) {
+        UIView.animate(withDuration: 0.5) {
+            self.helpView.alpha = 0
+        } completion: { Bool in
+            self.helpView.removeFromSuperview()
+
+        }
+
+    }
+    
+    
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?){
         if segue.identifier == "toAddTripSegue"{
@@ -37,6 +54,7 @@ class TripsViewController : UIViewController {
             popUp.savingDone = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
         }
     }
 }
