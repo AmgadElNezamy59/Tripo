@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,7 +21,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlF-eV-b1j">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g1C-ya-pC4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="g1C-ya-pC4">
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -61,6 +62,71 @@
                                             <outlet property="titleLbl" destination="N6M-IN-vb4" id="dk5-v0-9xV"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="9Z2-0l-EeA" customClass="ActivityTableViewCell" customModule="Tripo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="94" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Z2-0l-EeA" id="9HI-Sp-uCj">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpC-XR-fVO">
+                                                    <rect key="frame" x="20" y="11" width="353" height="78"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-SG-cP3">
+                                                            <rect key="frame" x="8" y="9.3333333333333321" width="65" height="59.333333333333343"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="62" id="6kT-Nc-A2c"/>
+                                                                <constraint firstAttribute="width" constant="65" id="kPy-Tt-e04"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PL1-vT-Drp">
+                                                            <rect key="frame" x="83" y="8" width="262" height="62"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIG-eo-CEe">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="262" height="27"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                                    <color key="textColor" name="Background"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ka-Mf-UzO">
+                                                                    <rect key="frame" x="0.0" y="35" width="262" height="27"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" systemColor="systemGray3Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="Accent"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="PL1-vT-Drp" secondAttribute="bottom" constant="8" id="1wM-hG-4Mr"/>
+                                                        <constraint firstAttribute="bottom" secondItem="FaZ-SG-cP3" secondAttribute="bottom" constant="8" id="5B6-9I-0aF"/>
+                                                        <constraint firstItem="FaZ-SG-cP3" firstAttribute="leading" secondItem="xpC-XR-fVO" secondAttribute="leading" constant="8" id="8Ir-7P-aSA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="PL1-vT-Drp" secondAttribute="trailing" constant="8" id="C6S-er-bhv"/>
+                                                        <constraint firstItem="PL1-vT-Drp" firstAttribute="leading" secondItem="FaZ-SG-cP3" secondAttribute="trailing" constant="10" id="Fk3-bU-2bt"/>
+                                                        <constraint firstAttribute="height" constant="78" id="Pyf-Dm-s7U"/>
+                                                        <constraint firstItem="PL1-vT-Drp" firstAttribute="top" secondItem="xpC-XR-fVO" secondAttribute="top" constant="8" id="gVb-Gq-90H"/>
+                                                        <constraint firstItem="FaZ-SG-cP3" firstAttribute="top" secondItem="xpC-XR-fVO" secondAttribute="top" constant="8" id="z2x-1m-kNp"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="xpC-XR-fVO" firstAttribute="top" secondItem="9HI-Sp-uCj" secondAttribute="topMargin" id="EJ0-os-bOy"/>
+                                                <constraint firstItem="xpC-XR-fVO" firstAttribute="leading" secondItem="9HI-Sp-uCj" secondAttribute="leadingMargin" id="ldW-e9-CiE"/>
+                                                <constraint firstItem="xpC-XR-fVO" firstAttribute="bottom" secondItem="9HI-Sp-uCj" secondAttribute="bottomMargin" id="qaA-Ix-njJ"/>
+                                                <constraint firstItem="xpC-XR-fVO" firstAttribute="trailing" secondItem="9HI-Sp-uCj" secondAttribute="trailingMargin" id="zeO-2O-Qm8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="xpC-XR-fVO" id="6Xu-Kr-XNo"/>
+                                            <outlet property="imgView" destination="FaZ-SG-cP3" id="DUU-Gd-tA5"/>
+                                            <outlet property="subTitleLbl" destination="1ka-Mf-UzO" id="qDj-VR-Ge2"/>
+                                            <outlet property="titleLbl" destination="sIG-eo-CEe" id="T91-2q-aRV"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -88,8 +154,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <namedColor name="Accent">
+            <color red="0.10588235294117647" green="0.24313725490196078" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Background">
+            <color red="0.93699997663497925" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

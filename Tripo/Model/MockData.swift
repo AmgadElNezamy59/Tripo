@@ -7,14 +7,18 @@
 
 import Foundation
 
-let activity1  : ActivityModel = ActivityModel(title: "Sand Skating", subTitle: "Ride Camel", activityType: ActivityType.flight)
+let activity1  : ActivityModel = ActivityModel(title: "DPS", subTitle: "Ride Camel", activityType: ActivityType.flight)
 
-let activity2  : ActivityModel = ActivityModel(title: "swim", subTitle: "Ride hourse", activityType: ActivityType.flight)
+let activity2  : ActivityModel = ActivityModel(title: "Pick up rental", subTitle: "Confirmation: 996464", activityType: ActivityType.auto)
 
-let activity3  : ActivityModel = ActivityModel(title: "fly", subTitle: "eat", activityType: ActivityType.flight)
+let activity3  : ActivityModel = ActivityModel(title: "Konrad Hotel checkin", subTitle: "eat", activityType: ActivityType.hotel)
+
+let activity4  : ActivityModel = ActivityModel(title: "City Excusion", subTitle: "Dicscovering the city", activityType: ActivityType.excursion)
+
+let activity5  : ActivityModel = ActivityModel(title: "Dinner", subTitle: "eating Koushari from abu tarek", activityType: ActivityType.food)
 
 
-let day1 : DayModel = DayModel(title: "18 Apr", subtitle: "Checking in", data: [activity1,activity3,activity2])
-let day2 : DayModel = DayModel(title: "15 Apr", subtitle: "Departure", data: [activity2,activity1,activity3])
-let day3 : DayModel = DayModel(title: "18 Aug", subtitle: "Exploring", data: [activity3,activity2,activity1])
+let day1 : DayModel = DayModel(title: "18 Apr", subtitle: "Checking in", data: [activity1,activity3,activity2,activity4,activity5])
+let day2 : DayModel = DayModel(title: "15 Apr", subtitle: "Departure", data: [activity2,activity1,activity3,activity4,activity5])
+let day3 : DayModel = DayModel(title: "18 Aug", subtitle: "Exploring", data: [activity3,activity2,activity1,activity4,activity5])
 

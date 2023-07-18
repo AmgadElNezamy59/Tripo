@@ -76,7 +76,9 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="778-nW-ij9"/>
+                    <navigationItem key="navigationItem" id="778-nW-ij9">
+                        <barButtonItem key="backBarButtonItem" title="Trips" id="8e0-QR-Ye1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="addBtn" destination="7FF-Wy-CIk" id="4sE-8B-jbl"/>
                         <outlet property="helpView" destination="yor-X4-ca4" id="Efa-pN-iNR"/>
@@ -149,10 +151,14 @@
             <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Tint"/>
     <resources>
         <image name="LeadingSwipe" width="696" height="268"/>
         <image name="TrailingSwipe" width="694" height="274"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Tint">
+            <color red="0.91764705882352937" green="0.33725490196078434" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -44,12 +44,6 @@ extension ActivitiesViewController:UITableViewDataSource ,UITableViewDelegate{
         return tripModel?.dayModels.count ?? 0
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let title =  tripModel?.dayModels[section].title ?? ""
-//        let subTitle =  tripModel?.dayModels[section].subTitle ?? ""
-//        return "\(title) - \(subTitle)"
-//
-//    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
          let dayModel = tripModel?.dayModels[section]
@@ -67,18 +61,23 @@ extension ActivitiesViewController:UITableViewDataSource ,UITableViewDelegate{
         return cell?.bounds.height ?? 44
     }
     
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tripModel?.dayModels[section].activityModels.count ?? 0
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier:"cell")
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier:"ce11")
-        }
+        let model = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier:"cell") as! ActivityTableViewCell
         
-        cell?.textLabel?.text = tripModel?.dayModels[indexPath.section].activityModels[indexPath.row].title
-        return cell!
+        cell.setUp(model: model!)
+       
+        
+        
+        return cell
     }
     
     

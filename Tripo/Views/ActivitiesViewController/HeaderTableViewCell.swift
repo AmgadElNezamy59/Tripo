@@ -13,8 +13,8 @@ class HeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLbl.font = UIFont(name: Theme.bodyFontFameBold, size: 17)
-        subTitleLbl.font = UIFont(name: Theme.bodyFontName, size: 15)
+        titleLbl.font = UIFont(name: Theme.bodyFontFameBold, size: 20)
+        subTitleLbl.font = UIFont(name: Theme.bodyFontNameDemiBold, size: 18)
 
     }
     

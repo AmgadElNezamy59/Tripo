@@ -14,6 +14,7 @@
 		1819B4C52A66E2E600889FDF /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1819B4C42A66E2E600889FDF /* ActivitiesViewController.storyboard */; };
 		1819B4C72A66FDDF00889FDF /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4C62A66FDDF00889FDF /* MockData.swift */; };
 		1819B4C92A670B6C00889FDF /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4C82A670B6C00889FDF /* HeaderTableViewCell.swift */; };
+		1819B4CB2A6718B400889FDF /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4CA2A6718B400889FDF /* ActivityTableViewCell.swift */; };
 		18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */; };
 		18818B902A63FE790017D7E2 /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */; };
 		18818B932A63FF420017D7E2 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B922A63FF420017D7E2 /* AddTripViewController.swift */; };
@@ -42,6 +43,7 @@
 		1819B4C42A66E2E600889FDF /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		1819B4C62A66FDDF00889FDF /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1819B4C82A670B6C00889FDF /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1819B4CA2A6718B400889FDF /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaotingActionButton.swift; sourceTree = "<group>"; };
 		18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		18818B922A63FF420017D7E2 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
@@ -95,9 +97,10 @@
 		1819B4BF2A66DD7100889FDF /* ActivitiesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1819B4C02A66DDB000889FDF /* ActivitiesViewController.swift */,
 				1819B4C42A66E2E600889FDF /* ActivitiesViewController.storyboard */,
+				1819B4C02A66DDB000889FDF /* ActivitiesViewController.swift */,
 				1819B4C82A670B6C00889FDF /* HeaderTableViewCell.swift */,
+				1819B4CA2A6718B400889FDF /* ActivityTableViewCell.swift */,
 			);
 			path = ActivitiesViewController;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */,
 				18BD5A2B2A630B3E003B979B /* UIViewExtension.swift in Sources */,
 				1819B4C12A66DDB000889FDF /* ActivitiesViewController.swift in Sources */,
+				1819B4CB2A6718B400889FDF /* ActivityTableViewCell.swift in Sources */,
 				1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,
 			);
