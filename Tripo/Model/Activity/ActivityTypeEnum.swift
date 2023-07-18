@@ -13,3 +13,4 @@ enum ActivityType {
     case food
     case hotel
 }
+

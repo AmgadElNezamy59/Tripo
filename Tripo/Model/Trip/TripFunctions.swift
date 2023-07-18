@@ -8,6 +8,7 @@
 import UIKit
 
 class TripFunctions {
+    
     static func createTrip(tripmodel : TripModel){
         
         Data.tripModels.append(tripmodel)
@@ -17,16 +18,31 @@ class TripFunctions {
     static func readTrips(completion : @escaping () -> ()){
         DispatchQueue.global(qos: .userInteractive).async {
             if Data.tripModels.count == 0 {
-                Data.tripModels.append(TripModel(title: "Trip to    "))
-                Data.tripModels.append(TripModel(title: "Mexico"))
-                Data.tripModels.append(TripModel(title: "Russion Trip "))
-                Data.tripModels.append(TripModel(title: "Egypt"))
+                Data.tripModels.append(TripModel(title: "Egypt",image: UIImage(named: "Pyramids"),dayModels: [day1,day2,day3,day1,day2,day3]))
+        
             }
         }
         DispatchQueue.main.async {
             completion()
         }
     }
+    
+    
+    
+    static func readTrip(by id: UUID, completion: @escaping (TripModel?) -> ()) {
+        // Replace with real data store code
+        DispatchQueue.global(qos: .userInitiated).async {
+            let trip = Data.tripModels.first(where: { $0.id == id })
+            
+            DispatchQueue.main.async {
+                completion(trip)
+            }
+        }
+    }
+    
+    
+    
+    
     
     
     static func updateTrip(at index : Int,title:String,image:UIImage?){
