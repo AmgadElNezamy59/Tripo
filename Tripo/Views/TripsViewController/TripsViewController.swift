@@ -143,4 +143,13 @@ extension TripsViewController : UITableViewDelegate{
         return UISwipeActionsConfiguration(actions: [edit])
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "ActivitiesViewController", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController()
+        navigationController?.pushViewController(vc!, animated: true)
+    }
+    
+    
+    
 }

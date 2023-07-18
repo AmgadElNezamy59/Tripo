@@ -11,6 +11,7 @@ class TripModel {
     let id : String
     var title : String
     var image : UIImage?
+    var dayModels = [DayModel]()
     
     init(title: String ,image : UIImage? = nil) {
         self.id = UUID().uuidString

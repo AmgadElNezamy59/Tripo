@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1819B4B92A66DAE400889FDF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4B82A66DAE400889FDF /* DayModel.swift */; };
+		1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */; };
+		1819B4BE2A66DC1100889FDF /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */; };
+		1819B4C12A66DDB000889FDF /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4C02A66DDB000889FDF /* ActivitiesViewController.swift */; };
+		1819B4C52A66E2E600889FDF /* ActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1819B4C42A66E2E600889FDF /* ActivitiesViewController.storyboard */; };
 		18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */; };
 		18818B902A63FE790017D7E2 /* AddTripViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */; };
 		18818B932A63FF420017D7E2 /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18818B922A63FF420017D7E2 /* AddTripViewController.swift */; };
@@ -28,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1819B4B82A66DAE400889FDF /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
+		1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
+		1819B4C02A66DDB000889FDF /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		1819B4C42A66E2E600889FDF /* ActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesViewController.storyboard; sourceTree = "<group>"; };
 		18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaotingActionButton.swift; sourceTree = "<group>"; };
 		18818B8F2A63FE790017D7E2 /* AddTripViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddTripViewController.storyboard; sourceTree = "<group>"; };
 		18818B922A63FF420017D7E2 /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +71,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1819B4B72A66DACD00889FDF /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				1819B4B82A66DAE400889FDF /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		1819B4BA2A66DB6E00889FDF /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */,
+				1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		1819B4BF2A66DD7100889FDF /* ActivitiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1819B4C02A66DDB000889FDF /* ActivitiesViewController.swift */,
+				1819B4C42A66E2E600889FDF /* ActivitiesViewController.storyboard */,
+			);
+			path = ActivitiesViewController;
+			sourceTree = "<group>";
+		};
 		18818B912A63FEFA0017D7E2 /* AddTripViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +142,8 @@
 			children = (
 				18BD5A1D2A62E10E003B979B /* Data.swift */,
 				18BD5A182A62DDEE003B979B /* Trip */,
+				1819B4B72A66DACD00889FDF /* Day */,
+				1819B4BA2A66DB6E00889FDF /* Activity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +160,7 @@
 		18BD5A1F2A62E6D3003B979B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1819B4BF2A66DD7100889FDF /* ActivitiesViewController */,
 				18818B912A63FEFA0017D7E2 /* AddTripViewController */,
 				18BD5A202A62E6E3003B979B /* TripsViewController */,
 			);
@@ -220,6 +259,7 @@
 				18818B902A63FE790017D7E2 /* AddTripViewController.storyboard in Resources */,
 				18BD5A332A632509003B979B /* Colors.xcassets in Resources */,
 				18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */,
+				1819B4C52A66E2E600889FDF /* ActivitiesViewController.storyboard in Resources */,
 				18BD5A262A62E8BE003B979B /* TripsViewController.storyboard in Resources */,
 				18BD5A312A6323A4003B979B /* FugazOne-Regular.ttf in Resources */,
 				18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */,
@@ -242,8 +282,12 @@
 				18BD5A1A2A62DDFF003B979B /* TripModel.swift in Sources */,
 				18BD5A282A62FEA3003B979B /* TripsTableViewCell.swift in Sources */,
 				18818B932A63FF420017D7E2 /* AddTripViewController.swift in Sources */,
+				1819B4B92A66DAE400889FDF /* DayModel.swift in Sources */,
+				1819B4BE2A66DC1100889FDF /* ActivityTypeEnum.swift in Sources */,
 				18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */,
 				18BD5A2B2A630B3E003B979B /* UIViewExtension.swift in Sources */,
+				1819B4C12A66DDB000889FDF /* ActivitiesViewController.swift in Sources */,
+				1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
