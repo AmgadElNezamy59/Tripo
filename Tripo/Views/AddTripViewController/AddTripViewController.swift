@@ -25,7 +25,7 @@ class AddTripViewController: UIViewController {
         popUpView.addRoundedCorner()
         popUpView.addShadow()
         popUpView.backgroundColor = Theme.backgroundColor
-        titleLbl.font = UIFont(name: Theme.mainFontame, size: 28)
+        titleLbl.font = UIFont(name: Theme.mainFontname, size: 28)
         tripImageView.layer.cornerRadius = 10
         
         titleLbl.layer.shadowOpacity = 1

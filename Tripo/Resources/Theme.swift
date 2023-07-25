@@ -8,7 +8,7 @@
 import UIKit
 
 class Theme {
-    static let mainFontame = "FugazOne-Regular"
+    static let mainFontname = "FugazOne-Regular"
     static let bodyFontName = "AvenirNext-Regular"
     static let bodyFontFameBold = "AvenirNext-Bold"
     static let bodyFontNameDemiBold = "AvenirNext-DemiBold"

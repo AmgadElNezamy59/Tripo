@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,9 +63,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FF-Wy-CIk" customClass="FlaotingActionButton" customModule="Tripo" customModuleProvider="target">
-                                <rect key="frame" x="318" y="758" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FF-Wy-CIk" customClass="FlaotingActionButton" customModule="Tripo" customModuleProvider="target">
+                                <rect key="frame" x="317" y="762" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="NE2-Es-mxe"/>
+                                    <constraint firstAttribute="width" constant="56" id="Q2B-UK-ULh"/>
+                                </constraints>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" weight="semibold"/>
                                 </buttonConfiguration>
@@ -75,6 +79,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7FF-Wy-CIk" secondAttribute="bottom" id="x9B-sn-YaD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7FF-Wy-CIk" secondAttribute="trailing" constant="20" id="yyJ-x2-7XZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="778-nW-ij9">
                         <barButtonItem key="backBarButtonItem" title="Trips" id="8e0-QR-Ye1"/>
@@ -140,6 +148,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eTp-Bu-1jv">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Accent"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="19"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -156,6 +169,9 @@
         <image name="LeadingSwipe" width="696" height="268"/>
         <image name="TrailingSwipe" width="694" height="274"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="Accent">
+            <color red="0.10588235294117647" green="0.24313725490196078" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="Tint">
             <color red="0.91764705882352937" green="0.33725490196078434" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

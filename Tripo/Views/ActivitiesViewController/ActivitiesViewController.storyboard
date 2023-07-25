@@ -129,11 +129,26 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiV-Sj-uBa" customClass="FlaotingActionButton" customModule="Tripo" customModuleProvider="target">
+                                <rect key="frame" x="317" y="762" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="5Bi-Lq-wy8"/>
+                                    <constraint firstAttribute="width" constant="56" id="5HE-fl-OOw"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" weight="semibold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VM2-2l-StZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TlF-eV-b1j" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="6De-L5-352"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="IiV-Sj-uBa" secondAttribute="bottom" id="7yh-65-pHm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IiV-Sj-uBa" secondAttribute="trailing" constant="20" id="DTr-af-Alw"/>
                             <constraint firstItem="g1C-ya-pC4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Xqp-Pi-O5n"/>
                             <constraint firstItem="TlF-eV-b1j" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="c8H-M0-9Cs"/>
                             <constraint firstAttribute="bottom" secondItem="g1C-ya-pC4" secondAttribute="bottom" id="fVb-Za-FMb"/>
@@ -144,6 +159,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addBtn" destination="IiV-Sj-uBa" id="N9O-GF-Td1"/>
                         <outlet property="backgroundImageView" destination="TlF-eV-b1j" id="iQn-Yz-RNv"/>
                         <outlet property="tableView" destination="g1C-ya-pC4" id="NGS-h5-cza"/>
                     </connections>
@@ -153,13 +169,18 @@
             <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="Tint"/>
     <resources>
         <image name="car" catalog="system" width="128" height="95"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="Accent">
             <color red="0.10588235294117647" green="0.24313725490196078" blue="0.29019607843137257" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Background">
             <color red="0.93699997663497925" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.91764705882352937" green="0.33725490196078434" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -9,18 +9,18 @@ import UIKit
 
 class ActivitiesViewController: UIViewController {
     
+    @IBOutlet weak var addBtn: FlaotingActionButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backgroundImageView : UIImageView!
     
     var tripId: UUID!
     var tripModel: TripModel?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
-
         
         TripFunctions.readTrip(by: tripId) { [weak self]  model in
             guard let self = self else { return}
@@ -29,13 +29,40 @@ class ActivitiesViewController: UIViewController {
             self.title = model.title
             self.backgroundImageView.image = model.image
             self.tableView.reloadData()
-
+            
             
             
         }
-
+        
     }
-
+    
+    
+    @IBAction func addAction(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
+        
+        let dayAction = UIAlertAction(title: "Day", style: .default,handler:handleAddDay)
+        
+        let activityAction = UIAlertAction(title: "Activity", style: .default) { action in
+            print("Add new activity")
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(activityAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+        
+        
+    }
+    
+    
+    func handleAddDay (action: UIAlertAction) {
+        print("Add new day")
+    }
+    
+    
 }
 
 extension ActivitiesViewController:UITableViewDataSource ,UITableViewDelegate{
@@ -46,7 +73,7 @@ extension ActivitiesViewController:UITableViewDataSource ,UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-         let dayModel = tripModel?.dayModels[section]
+        let dayModel = tripModel?.dayModels[section]
         let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! HeaderTableViewCell
         
         cell.setUp(model: dayModel!)
@@ -74,7 +101,7 @@ extension ActivitiesViewController:UITableViewDataSource ,UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier:"cell") as! ActivityTableViewCell
         
         cell.setUp(model: model!)
-       
+        
         
         
         return cell
