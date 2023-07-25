@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180BF8DC2A6F8D7100EDE53B /* AddDayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180BF8DB2A6F8D7100EDE53B /* AddDayViewController.storyboard */; };
+		180BF8DE2A6F8D8000EDE53B /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8DD2A6F8D8000EDE53B /* AddDayViewController.swift */; };
 		1819B4B92A66DAE400889FDF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4B82A66DAE400889FDF /* DayModel.swift */; };
 		1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */; };
 		1819B4BE2A66DC1100889FDF /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180BF8DB2A6F8D7100EDE53B /* AddDayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayViewController.storyboard; sourceTree = "<group>"; };
+		180BF8DD2A6F8D8000EDE53B /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		1819B4B82A66DAE400889FDF /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
@@ -77,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180BF8DA2A6F8D0C00EDE53B /* AddDayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				180BF8DB2A6F8D7100EDE53B /* AddDayViewController.storyboard */,
+				180BF8DD2A6F8D8000EDE53B /* AddDayViewController.swift */,
+			);
+			path = AddDayViewController;
+			sourceTree = "<group>";
+		};
 		1819B4B72A66DACD00889FDF /* Day */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		18BD5A1F2A62E6D3003B979B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				180BF8DA2A6F8D0C00EDE53B /* AddDayViewController */,
 				1819B4BF2A66DD7100889FDF /* ActivitiesViewController */,
 				18818B912A63FEFA0017D7E2 /* AddTripViewController */,
 				18BD5A202A62E6E3003B979B /* TripsViewController */,
@@ -269,6 +283,7 @@
 				18BD5A332A632509003B979B /* Colors.xcassets in Resources */,
 				18A73ECA2A61A5CF0050D904 /* LaunchScreen.storyboard in Resources */,
 				1819B4C52A66E2E600889FDF /* ActivitiesViewController.storyboard in Resources */,
+				180BF8DC2A6F8D7100EDE53B /* AddDayViewController.storyboard in Resources */,
 				18BD5A262A62E8BE003B979B /* TripsViewController.storyboard in Resources */,
 				18BD5A312A6323A4003B979B /* FugazOne-Regular.ttf in Resources */,
 				18A73EC72A61A5CF0050D904 /* Assets.xcassets in Resources */,
@@ -301,6 +316,7 @@
 				1819B4CB2A6718B400889FDF /* ActivityTableViewCell.swift in Sources */,
 				1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,
+				180BF8DE2A6F8D8000EDE53B /* AddDayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

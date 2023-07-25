@@ -59,7 +59,9 @@ class ActivitiesViewController: UIViewController {
     
     
     func handleAddDay (action: UIAlertAction) {
-        print("Add new day")
+        let storyBoard = UIStoryboard(name: "AddDayViewController", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController ()
+        self.present(vc!, animated: true)
     }
     
     
