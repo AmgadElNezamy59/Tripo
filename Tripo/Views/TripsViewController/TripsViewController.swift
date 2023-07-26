@@ -26,8 +26,6 @@ class TripsViewController : UIViewController {
                     self.view.addSubview(self.helpView)
                 }
             }
-            
-            
         }
     }
     

@@ -67,7 +67,7 @@ class ActivitiesViewController: UIViewController {
         
     }
     
-    fileprivate func getTripIndex() -> Array<TripModel>.Index? {
+    fileprivate func getTripIndex() -> Array<TripModel>.Index! {
         return Data.tripModels.firstIndex(where: { tripModel in
             tripModel.id == tripId
         })
@@ -151,6 +151,29 @@ extension ActivitiesViewController:UITableViewDataSource ,UITableViewDelegate{
         
         
         return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let activityModel = tripModel!.dayModels[indexPath.section].activityModels[indexPath.row]
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (action, view, actionPerformed : @escaping (Bool)->()) in
+            
+            let alert = UIAlertController(title: "Delete Activity", message: "Are you sure you want to delete this trip?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { alertAction in
+                actionPerformed(false)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { alertAction in
+                ActivityFunctions.deleteActivity(at: self.getTripIndex(), for: indexPath.section, using: activityModel)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                actionPerformed(true)
+            }))
+            
+            self.present(alert, animated: true)
+        }
+        delete.image = UIImage(systemName: "trash.fill")
+        return UISwipeActionsConfiguration(actions: [delete])
     }
     
     
