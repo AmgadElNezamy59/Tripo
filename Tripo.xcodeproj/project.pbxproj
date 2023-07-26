@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		180BF8DC2A6F8D7100EDE53B /* AddDayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180BF8DB2A6F8D7100EDE53B /* AddDayViewController.storyboard */; };
 		180BF8DE2A6F8D8000EDE53B /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8DD2A6F8D8000EDE53B /* AddDayViewController.swift */; };
+		180BF8E22A70DB4300EDE53B /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8E12A70DB4300EDE53B /* UITextFieldExtension.swift */; };
 		1819B4B92A66DAE400889FDF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4B82A66DAE400889FDF /* DayModel.swift */; };
 		1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */; };
 		1819B4BE2A66DC1100889FDF /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		180BF8DB2A6F8D7100EDE53B /* AddDayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayViewController.storyboard; sourceTree = "<group>"; };
 		180BF8DD2A6F8D8000EDE53B /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
+		180BF8E12A70DB4300EDE53B /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		1819B4B82A66DAE400889FDF /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				18BD5A2A2A630B3E003B979B /* UIViewExtension.swift */,
 				18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */,
 				18818B972A64091B0017D7E2 /* AppUIButton.swift */,
+				180BF8E12A70DB4300EDE53B /* UITextFieldExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				18818B8E2A63F3030017D7E2 /* FlaotingActionButton.swift in Sources */,
 				18BD5A2B2A630B3E003B979B /* UIViewExtension.swift in Sources */,
 				1819B4C12A66DDB000889FDF /* ActivitiesViewController.swift in Sources */,
+				180BF8E22A70DB4300EDE53B /* UITextFieldExtension.swift in Sources */,
 				1819B4CB2A6718B400889FDF /* ActivityTableViewCell.swift in Sources */,
 				1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */,
 				18A73EC02A61A5CE0050D904 /* SceneDelegate.swift in Sources */,

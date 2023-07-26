@@ -54,13 +54,8 @@ class AddTripViewController: UIViewController {
     
     
     @IBAction func saveBtnPressed(_ sender: Any) {
-        guard tripTxtField.text != "", let newTripName = tripTxtField.text else {
-            tripTxtField.layer.borderColor = Theme.tint?.cgColor
-            tripTxtField.layer.borderWidth = 1
-            tripTxtField.layer.cornerRadius = 5
-            tripTxtField.placeholder = "Trip name required"
-            return
-        }
+        guard tripTxtField.hasValue,let newTripName = tripTxtField.text else { return }
+        
         
         if let index = tripIndexToEdit {
             TripFunctions.updateTrip(at: index, title: newTripName, image: tripImageView.image)

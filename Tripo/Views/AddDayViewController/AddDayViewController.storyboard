@@ -26,7 +26,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                         <color key="tintColor" name="Tint"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrl-UL-7gv" customClass="AppUIButton" customModule="Tripo" customModuleProvider="target">
                                         <rect key="frame" x="235" y="223" width="104" height="32"/>
