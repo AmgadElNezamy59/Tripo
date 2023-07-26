@@ -9,15 +9,17 @@ import UIKit
 
 class AddDayViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var saveBtn: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
-    @IBOutlet weak var titleTxtField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var subTitleTxtField: UITextField!
     @IBOutlet weak var titleLbl: UILabel!
     
-    var savingDone : (()->())?
-    var tripIndexToEdit: Int?
+    var savingDone : ((DayModel)->())?
+    var tripIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +46,23 @@ class AddDayViewController: UIViewController {
     
     @IBAction func saveBtnPressed(_ sender: Any) {
         
-        guard titleTxtField.hasValue,let newTitle = titleTxtField.text else { return }
+        
+        let dayModel = DayModel(title: datePicker.date, subtitle: subTitleTxtField.text ?? "", data: nil)
+        
+        DayFunctions.createDays(at: tripIndex, using: dayModel)
         
         if let savingDone = savingDone{
-            savingDone()
+            savingDone(dayModel)
         }
         dismiss(animated: true)
         
+        print(dayModel)
+        
     }
+    
+    
+    @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
 }

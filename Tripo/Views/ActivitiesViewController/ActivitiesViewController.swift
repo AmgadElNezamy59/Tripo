@@ -16,12 +16,7 @@ class ActivitiesViewController: UIViewController {
     var tripId: UUID!
     var tripModel: TripModel?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
+    fileprivate func updateTableViewWithTripData() {
         TripFunctions.readTrip(by: tripId) { [weak self]  model in
             guard let self = self else { return}
             self.tripModel = model
@@ -33,6 +28,15 @@ class ActivitiesViewController: UIViewController {
             
             
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        updateTableViewWithTripData()
         
     }
     
@@ -60,8 +64,17 @@ class ActivitiesViewController: UIViewController {
     
     func handleAddDay (action: UIAlertAction) {
         let storyBoard = UIStoryboard(name: "AddDayViewController", bundle: nil)
-        let vc = storyBoard.instantiateInitialViewController ()
-        self.present(vc!, animated: true)
+        let vc = storyBoard.instantiateInitialViewController () as! AddDayViewController
+        vc.tripIndex = Data.tripModels.firstIndex(where: { tripModel in
+            tripModel.id == tripId
+            
+        })
+        vc.savingDone = { [weak self] (dayModel) -> () in
+            guard let self = self else { return}
+            self.updateTableViewWithTripData()
+
+        }
+        self.present(vc, animated: true)
         
     }
     

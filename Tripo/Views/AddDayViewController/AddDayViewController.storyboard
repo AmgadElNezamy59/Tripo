@@ -18,48 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-JH-Spj">
-                                <rect key="frame" x="16" y="60" width="361" height="277"/>
+                                <rect key="frame" x="16" y="60" width="361" height="422"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title or Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OK9-x5-JmS">
-                                        <rect key="frame" x="10" y="77" width="329" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                        <color key="tintColor" name="Tint"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrl-UL-7gv" customClass="AppUIButton" customModule="Tripo" customModuleProvider="target">
-                                        <rect key="frame" x="235" y="223" width="104" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-eF-taO" customClass="AppUIButton" customModule="Tripo" customModuleProvider="target">
+                                        <rect key="frame" x="22" y="351" width="80" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                         <connections>
-                                            <action selector="saveBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9xT-8M-km8"/>
+                                            <action selector="cancelBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EbN-gJ-kT1"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-jK-jC9">
+                                        <rect key="frame" x="22" y="304" width="318" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <color key="tintColor" name="Tint"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="done:" destination="Y6W-OH-hqX" eventType="primaryActionTriggered" id="kNG-W5-fiA"/>
+                                        </connections>
+                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Day" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw1-q0-aVn">
-                                        <rect key="frame" x="10" y="22" width="329" height="47"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <rect key="frame" x="9" y="21" width="344" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wse-jK-jC9">
-                                        <rect key="frame" x="10" y="119" width="329" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                        <color key="tintColor" name="Tint"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-eF-taO" customClass="AppUIButton" customModule="Tripo" customModuleProvider="target">
-                                        <rect key="frame" x="21" y="223" width="115" height="33"/>
+                                    <datePicker clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="yzx-ay-k7w">
+                                        <rect key="frame" x="9" y="83" width="344" height="204"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrl-UL-7gv" customClass="AppUIButton" customModule="Tripo" customModuleProvider="target">
+                                        <rect key="frame" x="260" y="351" width="80" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                         <connections>
-                                            <action selector="cancelBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="EbN-gJ-kT1"/>
+                                            <action selector="saveBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wtN-sw-LsZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -72,11 +72,11 @@
                     </view>
                     <connections>
                         <outlet property="cancelBtn" destination="vbd-eF-taO" id="knp-vU-g5q"/>
+                        <outlet property="datePicker" destination="yzx-ay-k7w" id="z3r-cd-ny5"/>
                         <outlet property="popUpView" destination="ekx-JH-Spj" id="dvd-dU-5vU"/>
                         <outlet property="saveBtn" destination="Jrl-UL-7gv" id="CTV-ay-ebj"/>
                         <outlet property="subTitleTxtField" destination="Wse-jK-jC9" id="Ok5-gQ-D65"/>
                         <outlet property="titleLbl" destination="aw1-q0-aVn" id="hC2-Vf-qBp"/>
-                        <outlet property="titleTxtField" destination="OK9-x5-JmS" id="ifW-Ze-Rp3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

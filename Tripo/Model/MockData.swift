@@ -18,7 +18,9 @@ let activity4  : ActivityModel = ActivityModel(title: "City Excusion", subTitle:
 let activity5  : ActivityModel = ActivityModel(title: "Dinner", subTitle: "eating Koushari from abu tarek", activityType: ActivityType.food)
 
 
-let day1 : DayModel = DayModel(title: "18 Apr", subtitle: "Checking in", data: [activity1,activity3,activity2,activity4,activity5])
-let day2 : DayModel = DayModel(title: "15 Apr", subtitle: "Departure", data: [activity2,activity1,activity3,activity4,activity5])
-let day3 : DayModel = DayModel(title: "18 Aug", subtitle: "Exploring", data: [activity3,activity2,activity1,activity4,activity5])
+let day1 : DayModel = DayModel(title: Calendar.current.date(bySetting: .day, value: 1, of: Date())!, subtitle: "Checking in", data: [activity1,activity3,activity2,activity4,activity5])
+
+let day2 : DayModel = DayModel(title: Calendar.current.date(bySetting: .day, value: 2, of: Date())!, subtitle: "Departure", data: [activity2,activity1,activity3,activity4,activity5])
+
+let day3 : DayModel = DayModel(title: Calendar.current.date(bySetting: .day, value: 3, of: Date())!, subtitle: "Exploring", data: [activity3,activity2,activity1,activity4,activity5])
 
