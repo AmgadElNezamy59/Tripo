@@ -18,6 +18,8 @@ class AddDayViewController: UIViewController {
     @IBOutlet weak var subTitleTxtField: UITextField!
     @IBOutlet weak var titleLbl: UILabel!
     
+    var tripModel : TripModel!
+
     var savingDone : ((DayModel)->())?
     var tripIndex: Int!
     

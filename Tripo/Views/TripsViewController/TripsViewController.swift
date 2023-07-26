@@ -16,13 +16,7 @@ class TripsViewController : UIViewController {
     var tripIndexToEdit: Int?
 
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        
+    fileprivate func getTripData() {
         TripFunctions.readTrips {
             
             self.tableView.reloadData()
@@ -35,6 +29,16 @@ class TripsViewController : UIViewController {
             
             
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        
+        getTripData()
         
     
         view.backgroundColor = Theme.backgroundColor

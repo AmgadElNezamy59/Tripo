@@ -30,6 +30,9 @@ class ActivitiesViewController: UIViewController {
         }
     }
     
+    
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,13 +47,16 @@ class ActivitiesViewController: UIViewController {
     @IBAction func addAction(_ sender: UIButton) {
         let alert = UIAlertController(title: "Which would you like to add?", message: nil, preferredStyle: .actionSheet)
         
-        let dayAction = UIAlertAction(title: "Day", style: .default,handler:handleAddDay)
+        let dayAction = UIAlertAction(title: "Day", style: .default,handler: handleAddDay)
         
-        let activityAction = UIAlertAction(title: "Activity", style: .default) { action in
-            print("Add new activity")
-            
-        }
+        let activityAction = UIAlertAction(title: "Activity", style: .default,handler: handleAddActivity)
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        if tripModel?.dayModels.count == 0 {
+            activityAction.isEnabled = false
+        }
+        
         
         alert.addAction(dayAction)
         alert.addAction(activityAction)
@@ -61,18 +67,42 @@ class ActivitiesViewController: UIViewController {
         
     }
     
+    fileprivate func getTripIndex() -> Array<TripModel>.Index? {
+        return Data.tripModels.firstIndex(where: { tripModel in
+            tripModel.id == tripId
+        })
+    }
+    
+    func handleAddActivity (action: UIAlertAction){
+        let storyBoard = UIStoryboard(name: "AddActivitiesViewController", bundle: nil)
+        let vc = storyBoard.instantiateInitialViewController () as! AddActivitiesViewController
+        vc.tripModel = tripModel
+        vc.tripIndex = getTripIndex()
+        vc.savingDone =  { [weak self] dayIndex, activityModel in
+            guard let self = self else { return }
+            self.tripModel?.dayModels[dayIndex].activityModels.append(activityModel)
+            self.tableView.reloadData()
+        }
+        
+       
+
+        self.present(vc, animated: true)
+        
+    }
+    
+    
+    
     
     func handleAddDay (action: UIAlertAction) {
         let storyBoard = UIStoryboard(name: "AddDayViewController", bundle: nil)
         let vc = storyBoard.instantiateInitialViewController () as! AddDayViewController
-        vc.tripIndex = Data.tripModels.firstIndex(where: { tripModel in
-            tripModel.id == tripId
+        
+        vc.tripIndex = getTripIndex()
             
-        })
         vc.savingDone = { [weak self] (dayModel) -> () in
             guard let self = self else { return}
             self.updateTableViewWithTripData()
-
+            
         }
         self.present(vc, animated: true)
         

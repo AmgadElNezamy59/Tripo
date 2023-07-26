@@ -13,6 +13,8 @@
 		180BF8E42A70DF0700EDE53B /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8E32A70DF0700EDE53B /* DayFunctions.swift */; };
 		180BF8E72A71095500EDE53B /* AddActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8E62A71095500EDE53B /* AddActivitiesViewController.swift */; };
 		180BF8E92A71095C00EDE53B /* AddActivitiesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180BF8E82A71095C00EDE53B /* AddActivitiesViewController.storyboard */; };
+		180BF8EB2A71173B00EDE53B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8EA2A71173B00EDE53B /* DateExtension.swift */; };
+		180BF8ED2A7122EF00EDE53B /* ActivityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180BF8EC2A7122EF00EDE53B /* ActivityFunctions.swift */; };
 		1819B4B92A66DAE400889FDF /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4B82A66DAE400889FDF /* DayModel.swift */; };
 		1819B4BC2A66DB7C00889FDF /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */; };
 		1819B4BE2A66DC1100889FDF /* ActivityTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */; };
@@ -48,6 +50,8 @@
 		180BF8E32A70DF0700EDE53B /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 		180BF8E62A71095500EDE53B /* AddActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitiesViewController.swift; sourceTree = "<group>"; };
 		180BF8E82A71095C00EDE53B /* AddActivitiesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddActivitiesViewController.storyboard; sourceTree = "<group>"; };
+		180BF8EA2A71173B00EDE53B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		180BF8EC2A7122EF00EDE53B /* ActivityFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityFunctions.swift; sourceTree = "<group>"; };
 		1819B4B82A66DAE400889FDF /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTypeEnum.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			children = (
 				1819B4BB2A66DB7C00889FDF /* ActivityModel.swift */,
 				1819B4BD2A66DC1100889FDF /* ActivityTypeEnum.swift */,
+				180BF8EC2A7122EF00EDE53B /* ActivityFunctions.swift */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				18818B8D2A63F3030017D7E2 /* FlaotingActionButton.swift */,
 				18818B972A64091B0017D7E2 /* AppUIButton.swift */,
 				180BF8E12A70DB4300EDE53B /* UITextFieldExtension.swift */,
+				180BF8EA2A71173B00EDE53B /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -319,6 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18BD5A2E2A631E72003B979B /* Theme.swift in Sources */,
+				180BF8ED2A7122EF00EDE53B /* ActivityFunctions.swift in Sources */,
+				180BF8EB2A71173B00EDE53B /* DateExtension.swift in Sources */,
 				18BD5A1E2A62E10E003B979B /* Data.swift in Sources */,
 				18BD5A1C2A62DE0D003B979B /* TripFunctions.swift in Sources */,
 				1819B4C72A66FDDF00889FDF /* MockData.swift in Sources */,
